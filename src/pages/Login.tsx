@@ -23,7 +23,7 @@ export default function Login() {
   return (
     <main className="min-h-full flex flex-col justify-center px-6 max-w-md mx-auto">
       <div className="text-center mb-8">
-        <div className="text-6xl font-extrabold text-accent">rep²</div>
+        <div className="text-7xl font-black text-accent">rep²</div>
         <p className="text-secondary mt-2">אימונים ואוכל, לשנינו</p>
       </div>
       <Card>
@@ -32,7 +32,7 @@ export default function Login() {
           {mode === 'up' && <Input placeholder="שם" value={name} onChange={e => setName(e.target.value)} required />}
           <Input type="email" placeholder="אימייל" dir="ltr" autoComplete="email" value={email} onChange={e => setEmail(e.target.value)} required />
           <Input type="password" placeholder="סיסמה (6 תווים לפחות)" dir="ltr" autoComplete={mode === 'up' ? 'new-password' : 'current-password'} minLength={6} value={password} onChange={e => setPassword(e.target.value)} required />
-          {error && <p className="text-[15px] text-red-500">{error}</p>}
+          {error && <p className="text-[17px] text-red-500">{error}</p>}
           <Button disabled={busy}>{mode === 'up' ? 'יצירת חשבון' : 'כניסה'}</Button>
         </form>
       </Card>

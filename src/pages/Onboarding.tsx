@@ -22,7 +22,7 @@ export default function Onboarding() {
   return (
     <Page title={`היי ${me?.name || ''} 👋`}>
       <Card title="מתחילים זוג חדש">
-        <p className="text-[15px] text-secondary mb-3">תקבלו קוד לשלוח לבן או לבת הזוג.</p>
+        <p className="text-[17px] text-secondary mb-3">תקבלו קוד לשלוח לבן או לבת הזוג.</p>
         <Button className="w-full" onClick={create}>יצירת זוג</Button>
       </Card>
       <Card title="קיבלתם קוד?">
@@ -30,7 +30,7 @@ export default function Onboarding() {
           <Input placeholder="קוד הזמנה" dir="ltr" value={code} onChange={e => setCode(e.target.value)} className="uppercase tracking-widest text-center" />
           <Button variant="tinted" onClick={join} disabled={code.length < 4}>הצטרפות</Button>
         </div>
-        {error && <p className="text-[15px] text-red-500 mt-2">{error}</p>}
+        {error && <p className="text-[17px] text-red-500 mt-2">{error}</p>}
       </Card>
     </Page>
   )

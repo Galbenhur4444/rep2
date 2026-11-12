@@ -18,7 +18,7 @@ export default function TabBar() {
               to={t.to}
               end
               className={({ isActive }) =>
-                `flex flex-col items-center gap-0.5 pt-2 pb-1 min-h-[52px] text-[10px] font-medium ${isActive ? 'text-accent' : 'text-secondary'}`
+                `flex flex-col items-center gap-0.5 pt-2 pb-1 min-h-[52px] text-[12px] font-bold ${isActive ? 'text-accent' : 'text-secondary'}`
               }
             >
               <span className="text-2xl leading-none">{t.icon}</span>

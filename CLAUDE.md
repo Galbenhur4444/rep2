@@ -9,7 +9,7 @@ Hebrew (RTL) PWA for a couple: fixed weekly workout slots, weekly meal planning,
 - Hosting: Netlify (auto-deploy from GitHub main)
 
 ## Rules
-- UI text in Hebrew, `dir="rtl"`. Apple-like style: system font, rounded cards (16px), accent #FF375F, dark mode, tap targets >= 44px, safe-area insets. Shared UI in `src/ui.tsx`.
+- UI text in Hebrew, `dir="rtl"`. Apple-like style: system font, rounded cards (16px), accent #6E8F5E, dark mode, tap targets >= 44px, safe-area insets. Shared UI in `src/ui.tsx`.
 - Mobile-first; test at 390px width.
 - Every table has RLS: only members of the same couple. Personal data visible to partner only when the matching share flag is on.
 - AI responses: JSON validated with zod before use.

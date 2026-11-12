@@ -27,8 +27,8 @@ export default function Workouts() {
       <div className="flex items-center justify-between">
         <Button variant="plain" onClick={() => setStart(addDays(start, -7))}>→ קודם</Button>
         <div className="text-center">
-          <div className="text-[15px] font-semibold">{shortDate(iso(start))} – {shortDate(iso(addDays(start, 6)))}</div>
-          <div className="text-[13px] text-secondary">{doneCount} מתוך {items.length} בוצעו</div>
+          <div className="text-[17px] font-semibold">{shortDate(iso(start))} – {shortDate(iso(addDays(start, 6)))}</div>
+          <div className="text-[15px] text-secondary">{doneCount} מתוך {items.length} בוצעו</div>
         </div>
         <Button variant="plain" onClick={() => setStart(addDays(start, 7))}>הבא ←</Button>
       </div>
@@ -56,10 +56,10 @@ export default function Workouts() {
           <div className="divide-y divide-separator">
             {slots.map(s => (
               <div key={s.id} className="flex items-center py-2 gap-2">
-                <div className="flex-1 text-[15px]">
+                <div className="flex-1 text-[17px]">
                   {DAYS[s.weekday]} {hhmm(s.time)} · {s.type} · {s.together ? 'ביחד' : 'לבד'}
                 </div>
-                <button className="min-h-[44px] px-2 text-[15px] text-red-500"
+                <button className="min-h-[44px] px-2 text-[17px] text-red-500"
                   onClick={async () => { if (confirm('למחוק את המשבצת הקבועה?')) { await supabase.from('workout_slots').delete().eq('id', s.id); refresh() } }}>
                   מחיקה
                 </button>
@@ -95,7 +95,7 @@ function AddForm({ meId, coupleId, start, onDone }: { meId: string; coupleId: st
         <div className="flex flex-wrap gap-1">
           {DAYS.map((d, i) => (
             <button type="button" key={d} onClick={() => setWeekday(i)}
-              className={`min-h-[40px] px-3 rounded-full text-[15px] ${weekday === i ? 'bg-accent text-white' : 'bg-bg'}`}>{d}</button>
+              className={`min-h-[40px] px-3 rounded-full text-[17px] ${weekday === i ? 'bg-accent text-white' : 'bg-soft'}`}>{d}</button>
           ))}
         </div>
         <div className="flex gap-2">

@@ -27,18 +27,18 @@ export default function Today() {
       <Card title="האימונים של היום">
         {todays.length
           ? <div className="divide-y divide-separator">{todays.map(it => <WorkoutCard key={(it.id ?? it.slot_id) + it.date} item={it} onChange={refresh} />)}</div>
-          : <p className="text-[17px]">אין אימון היום 😌</p>}
+          : <p className="text-[19px]">אין אימון היום 😌</p>}
       </Card>
       {next && (
         <Card title="הבא בתור">
-          <p className="text-[17px]">{next.type} · יום {DAYS[parse(next.date).getDay()]} {next.time.slice(0, 5)}</p>
+          <p className="text-[19px]">{next.type} · יום {DAYS[parse(next.date).getDay()]} {next.time.slice(0, 5)}</p>
         </Card>
       )}
       <Card title="השבוע">
-        <p className="text-[28px] font-bold">{weekDone} 🔥</p>
-        <p className="text-[15px] text-secondary">אימונים שבוצעו השבוע</p>
+        <p className="text-[34px] font-extrabold">{weekDone} 🔥</p>
+        <p className="text-[17px] text-secondary">אימונים שבוצעו השבוע</p>
       </Card>
-      <Link to="/workouts" className="text-accent text-[17px] text-center py-2">לכל האימונים ←</Link>
+      <Link to="/workouts" className="text-accent text-[19px] text-center py-2">לכל האימונים ←</Link>
     </Page>
   )
 }
