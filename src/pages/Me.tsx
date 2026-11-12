@@ -24,13 +24,13 @@ export default function Me() {
               <p className="text-[15px] text-secondary mt-2">בהרשמה, הם בוחרים "קיבלתם קוד?" ומקלידים אותו.</p>
             </>}
       </Card>
-      {!partner && <Card title="קיבלתם קוד מבן/בת הזוג?">
+      {!partner && (<Card title="קיבלתם קוד?">
         <div className="flex gap-2">
           <Input placeholder="קוד הזמנה" dir="ltr" value={code} onChange={e => setCode(e.target.value)} className="uppercase tracking-widest text-center" />
           <Button variant="tinted" onClick={join} disabled={code.length < 4}>הצטרפות</Button>
         </div>
         {msg && <p className="text-[15px] text-red-500 mt-2">{msg}</p>}
-      </Card>
+      </Card>)}
       <Card title="בקרוב">
         <p className="text-secondary">מדדים, יעדים והגדרות שיתוף 🚧</p>
       </Card>
